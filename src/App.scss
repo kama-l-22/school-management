@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Signika+Negative&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 18px;
+}
+
+$colorOne : #a892f9;
+$colorTwo : #D0BFFF;
+$colorThree : #DFCCFB;
+$colorThreeFade : #ffffff;
+$colorFour : #FFF8C9;
+
+body{
+  background: #f1f1f1;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $colorThreeFade;
+  height: 60px;
+  border-bottom: 1px solid $colorFour;
+  box-shadow: 0px 10px 15px -10px rgb(201, 201, 201); 
+  .one{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    .heading{font-size: 20px;
+    margin-left: 20px;}
+    .logo img{
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .two{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    .username{
+      font-size: 22px;
+      .user{
+        color: $colorOne;
+        font-weight: bold;
+        margin-left: 8px;
+        font-size: 22px;
+      }
+    
+    }
+    .burgericon{
+      display: flex;
+      justify-content: center;
+      margin: 5px;
+      margin-left: 20px;
+      img{
+      width: 40px;
+      height: 40px;
+      cursor: pointer;}
+    }
+  }
+  
+}
