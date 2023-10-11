@@ -6,7 +6,7 @@ export default function ImprotantNotice({message}) {
       <div className='importantlogo'>
         <img alt='improtant logo' src={imporlogo}></img>
       </div>
-      <div className='message'>Important Notice will be dispaly here X Important Notice will be dispaly here</div>
+      <div className='message'>Important Notice will be dispaly here  dispaly here</div>
     </div>
   )
 }

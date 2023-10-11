@@ -1,6 +1,7 @@
 import React from 'react'
 import nklogo from '../asset/nkvlogobg.png'
 import menu from'../asset/menu.png'
+import BurgerMenu from './burgerMenu'
 export default function Navbar({userName}) {
   return (
     <div className='navbar'>
@@ -10,7 +11,7 @@ export default function Navbar({userName}) {
       </div>
       <div className='two'>
         <div className='username'>Welcome..! <span className='user'>{userName}</span> </div>
-        <div className='burgericon'> <img alt='menubutton'className='brgicon' src={menu}></img></div>
+        <BurgerMenu/>
       </div>
     </div>
   )

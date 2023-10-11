@@ -9,6 +9,7 @@ export default function ShowPeople({ role, count, logo }) {
       </div>
       <div className="splitline"></div>
       <div className="count">
+        {count}
       </div>
     </div>
   );
