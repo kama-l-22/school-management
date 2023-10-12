@@ -13,16 +13,15 @@
   width: 0px;
 }
 
-
 $colorOne: #a892f9;
 $colorTwo: #d0bfff;
 $colorThree: #dfccfb;
 $colorThreeFade: #ffffff;
 $colorFour: #fff8c9;
 $mid-black: #171717;
-$green :#2a8639;
-$colorRed :#ff7e7e;
-
+$green: #2a8639;
+$colorRed: #ff7e7e;
+$pureWhite: #fff;
 body {
   background: #e5e5e5;
 }
@@ -95,7 +94,7 @@ body {
       .userdetails {
         margin-top: 10px;
         margin-left: 5px;
-        .name{
+        .name {
           font-size: 25px;
         }
       }
@@ -115,39 +114,42 @@ body {
         height: 30px;
       }
     }
-    
   }
-  .your{
+  .your {
     margin-left: 25px;
     margin-top: 20px;
-    .view,.picture{
-    padding:3px 0px;
-    cursor: pointer;
-    &:hover{
-      color: $colorOne;
-    }
-    }
-  }
-  .function{
-    margin-left: 25px;
-    margin-top: 20px;
-    .add,.remove{
-    padding:3px 0px;
-    cursor: pointer;
-    &:hover{
-      color: $colorOne;
-    }
+    .view,
+    .picture {
+      padding: 3px 0px;
+      cursor: pointer;
+      &:hover {
+        color: $colorOne;
+      }
     }
   }
-  .logs{
+  .function {
     margin-left: 25px;
     margin-top: 20px;
-    .logout,.signup,.switchuser{
-    padding:3px 0px;
-    cursor: pointer;
-    &:hover{
-      color: $colorOne;
+    .add,
+    .remove {
+      padding: 3px 0px;
+      cursor: pointer;
+      &:hover {
+        color: $colorOne;
+      }
     }
+  }
+  .logs {
+    margin-left: 25px;
+    margin-top: 20px;
+    .logout,
+    .signup,
+    .switchuser {
+      padding: 3px 0px;
+      cursor: pointer;
+      &:hover {
+        color: $colorOne;
+      }
     }
   }
 }
@@ -192,6 +194,174 @@ body {
     height: 550px;
     border-radius: 10px;
     margin-top: 20px;
+    .heading {
+      margin-left: 20px;
+      margin-top: 20px;
+      font-size: 20px;
+      color: $colorOne;
+      padding: 20px;
+      padding-bottom: 15px;
+      word-spacing: 3px;
+      letter-spacing: 1px;
+    }
+    .flow {
+      width: 92%;
+      margin-left: 40px;
+      height: 50px;
+      // background: #000;
+      border-radius: 5px;
+      margin-top: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      .search {
+        display: flex;
+        align-items: center;
+        input {
+          background: #f0f0f0;
+          width: 400px;
+          height: 40px;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          padding-left: 20px;
+          &::placeholder {
+            padding-left: 20px;
+            // color: $mid-black;
+          }
+        }
+        img {
+          height: 39px;
+          width: 39px;
+          padding: 10px;
+          background: #f0f0f0;
+          border-radius: 5px;
+          margin-left: 5px;
+        }
+      }
+      .buttons {
+        button {
+          height: 40px;
+          width: 100px;
+          font-size: 20px;
+          margin: 0px 2px;
+          font-size: 16px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .post {
+          background: $green;
+          color: white;
+          margin-left: 10px;
+        }
+        .add {
+          background: $colorFour;
+          color: black;
+        }
+      }
+    }
+    .Fliter {
+      width: 92%;
+      margin-left: 40px;
+      height: 60px;
+      // background: #000;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header {
+        width: 50%;
+        height: 40px;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        .sn {
+          color: $mid-black;
+          margin-left: 30px;
+        }
+        .stname {
+          margin-left: 60px;
+        }
+      }
+      .date {
+        input[type="date"] {
+          background: $colorTwo;
+          padding: 12px;
+          padding-left: 15px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+        }
+        input[type="date"]::-webkit-datetime-edit {
+          text-transform: uppercase;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .details {
+      height: 350px;
+      width: 92%;
+      background: #f0f0f0;
+      margin: 0px auto;
+      border-radius: 5px;
+      margin-left: 40px;
+      overflow-y: scroll;
+      margin-top: 10px;
+      padding-top: 10px;
+
+      .student {
+        width: 98%;
+        height: 50px;
+        border-radius: 10px;
+        background: $colorThreeFade;
+        margin: 5px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .dets {
+          margin-left: 20px;
+          display: flex;
+          align-items: center;
+          width: 35%;
+          margin-right: 20px;
+          .name {
+            margin-left: 40px;
+          }
+        }
+        .actions {
+          display: flex;
+          margin-right: 20px;
+          .remark {
+            margin-right: 40px;
+            background-color: $colorFour;
+          }
+          .present {
+            color: white;
+            background: $green;
+          }
+          .absent {
+            color: white;
+            background: $colorRed;
+            margin-left: 5px;
+          }
+          button {
+            height: 30px;
+            width: 70px;
+            font-size: 20px;
+            margin: 0px 2px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -247,19 +417,19 @@ body {
     overflow-y: scroll;
     border-radius: 5px;
     margin: 10px auto;
-    .top{
+    .top {
       font-size: 25px;
       margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 50px;
-      .heading{
+      .heading {
         padding-left: 30px;
         color: $green;
         font-size: 20px;
       }
-      .addnoticebutton{
+      .addnoticebutton {
         background: $green;
         color: white;
         font-size: 25px;
@@ -268,30 +438,29 @@ body {
         text-align: center;
         margin-right: 30px;
         cursor: pointer;
-        
       }
     }
-    .notices{
+    .notices {
       width: 100%;
       margin-top: 10px;
-      .good{
+      .good {
         background: $colorThree;
       }
-      .warn{
-        background-color:$colorFour;
+      .warn {
+        background-color: $colorFour;
       }
-      .bad{
+      .bad {
         background-color: $colorRed;
       }
-      .notice{
+      .notice {
         width: 90%;
         height: 40px;
         margin: 9px auto;
         display: flex;
         align-items: center;
         border-radius: 5px;
-        color:$mid-black;
-        img{
+        color: $mid-black;
+        img {
           width: 23px;
           height: 23px;
           margin-left: 10px;
@@ -302,10 +471,31 @@ body {
   }
 }
 
-.splitLineVr{
+.splitLineVr {
   height: 2px;
   width: 90%;
   border-radius: 2px;
   background: $mid-black;
   margin: 10px auto;
+}
+
+// modals
+
+.addnoticemodal {
+  width: 100%;
+  height: 100%;
+  background: #24242478;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  position: fixed;
+  .noticeModal {
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+    background: $pureWhite;
+    border-radius: 10px;
+  }
 }

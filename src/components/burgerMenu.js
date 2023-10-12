@@ -53,7 +53,7 @@ export default function BurgerMenu() {
           <SplitlineVr />
           <div className="logs">
             <div className="logout">Log Out</div>
-            <div className="signup">Sign-Up New User</div>
+            <div className="signup">Exit Organisation</div>
             <div className="switchuser">Switch User</div>
           </div>
         </div>
