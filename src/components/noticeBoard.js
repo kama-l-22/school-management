@@ -14,7 +14,7 @@ export default function NoticeBoard() {
   };
   return (
     <>
-      {openmodal&& <AddNoticeModal />}
+      {openmodal && <AddNoticeModal openmodal={openmodal} opnAndClose={opnAndClose} />}
       <div className="noticeBoard">
         <div className="top">
           <div className="heading"> Notice Board </div>

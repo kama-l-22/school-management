@@ -8,12 +8,15 @@ import ShowPeople from "./components/showPeople";
 import NoticeBoard from "./components/noticeBoard";
 import student from '../src/asset/icons8-students-64.png'
 import teacher from '../src/asset/icons8-teacher-64.png'
+import Notificationmodal from "./modals/notificationModal";
 
 
 export default function App() {
   const [userName, setuserName] = useState("Kamalesh");
+  const [openNotfi,setOpenNotifi] = useState(true)
   return (
     <div>
+      { openNotfi && <Notificationmodal/>}
       <Navbar userName={userName} />
       <div className="main">
         <div className="mainOne">

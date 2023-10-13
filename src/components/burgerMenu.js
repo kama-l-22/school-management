@@ -3,12 +3,19 @@ import menu from "../asset/menu.png";
 import { useState } from "react";
 import closebtn from "../asset/icons8-close-64.png";
 import SplitlineVr from "./splitlineVr";
+import AddStudentModal from "../modals/addStudentModal";
 
 export default function BurgerMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const openAndClose = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const [addStdOpen, setAddStdOpen] = useState(false);
+  const openAddStdClose = () => {
+    setAddStdOpen(!addStdOpen);
+  };
+
   return (
     <div className="burgericon">
       {" "}
@@ -47,13 +54,14 @@ export default function BurgerMenu() {
           </div>
           <SplitlineVr />
           <div className="function">
-            <div className="add">Add New Scholor</div>
+           {addStdOpen && <AddStudentModal addStdOpen={addStdOpen} openAddStdClose={openAddStdClose} opnAndClose={openAndClose}/>} 
+            <div className="add" onClick={()=>{openAddStdClose()}}>Add New Scholor</div>
             <div className="remove">Remove Scholor</div>
           </div>
           <SplitlineVr />
           <div className="logs">
             <div className="logout">Log Out</div>
-            <div className="signup">Exit Organisation</div>
+            <div className="signup">Exit Organis</div>
             <div className="switchuser">Switch User</div>
           </div>
         </div>
