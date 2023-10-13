@@ -5,7 +5,11 @@ import closebtn from "../asset/icons8-close-64.png";
 import SplitlineVr from "./splitlineVr";
 import AddStudentModal from "../modals/addStudentModal";
 
-export default function BurgerMenu() {
+export default function BurgerMenu({
+  openNotfi,
+  setOpenNotifi,
+  openAndCloseNotfi,
+}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const openAndClose = () => {
     setMenuOpen(!menuOpen);
@@ -54,8 +58,21 @@ export default function BurgerMenu() {
           </div>
           <SplitlineVr />
           <div className="function">
-           {addStdOpen && <AddStudentModal addStdOpen={addStdOpen} openAddStdClose={openAddStdClose} opnAndClose={openAndClose}/>} 
-            <div className="add" onClick={()=>{openAddStdClose()}}>Add New Scholor</div>
+            {addStdOpen && (
+              <AddStudentModal
+                addStdOpen={addStdOpen}
+                openAddStdClose={openAddStdClose}
+                opnAndClose={openAndClose}
+              />
+            )}
+            <div
+              className="add"
+              onClick={() => {
+                openAddStdClose();
+              }}
+            >
+              Add New Scholor
+            </div>
             <div className="remove">Remove Scholor</div>
           </div>
           <SplitlineVr />

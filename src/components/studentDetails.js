@@ -3,11 +3,15 @@ import serachIcon from "../asset/icons8-search-50.png";
 import Student from "./student";
 import AddStudentModal from "../modals/addStudentModal";
 import { useState } from "react";
+import PostDataModal from "../modals/postDataModal";
 export default function StudentDetails() {
   const [addStdOpen, setAddStdOpen] = useState(false);
   const openAddStdClose = () => {
     setAddStdOpen(!addStdOpen);
+
   };
+  const [openpostmodal, setopenpostmodal] = useState(false)
+
   return (
     <>
     {addStdOpen && <AddStudentModal addStdOpen={addStdOpen} openAddStdClose={openAddStdClose} setAddStdOpen={setAddStdOpen}/>} 
@@ -25,7 +29,8 @@ export default function StudentDetails() {
             openAddStdClose();
           }}
           >ADD</button>
-          <button className="post">POST</button>
+          { openpostmodal && <PostDataModal openpostmodal={openpostmodal} setopenpostmodal={setopenpostmodal}/>}
+          <button className="post" onClick={()=>{setopenpostmodal(!openpostmodal)}}>POST</button>
         </div>
       </div>
       <div className="Fliter">
@@ -41,6 +46,15 @@ export default function StudentDetails() {
         <Student />
         <Student />
         <Student />
+        <Student />
+        <Student />
+        <Student />
+        <Student />
+        <Student />
+        <Student />
+        <Student />
+        <Student />
+
       </div>
     </div>
 </>

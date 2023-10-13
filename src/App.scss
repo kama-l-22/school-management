@@ -480,6 +480,70 @@ body {
 }
 
 // modals
+.postdatamodal{
+  width: 100%;
+  height: 100%;
+  background: #24242478;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  position: fixed;   
+  .postmodal{
+    margin-top: 20px;
+    width: 430px;
+    height: 230px;
+    background: $pureWhite;
+    border-radius: 10px;
+    position: relative;
+    .cancleButton {
+      font-size: 20px;
+      position: absolute;
+      font-family: monospace;
+      top: 100;
+      right: 0;
+      margin-top: 8px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .heading{
+      margin-top: 5px;
+      margin-left: 20px;
+      font-size: 20px;
+    }
+    .message{
+      width: 300px;
+      margin-left: 40px;
+    }
+    .buttons{
+      margin-top: 20px;
+      margin-left: 30px;
+      display: flex;
+      button {
+        height: 40px;
+        font-size: 20px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .post-modal{
+        background: $green;
+        color: white;
+        font-size: 15px !important;
+        width: 130px !important;
+      }
+      .cnl-modal {
+        margin-left: 20px;
+        background: $colorFour;
+        color: black;
+        margin-left: 10px !important;
+      }
+    }
+  }
+}
 .notfiModal{
   width: 100%;
   height: 18%;
@@ -533,7 +597,7 @@ body {
   justify-content: center;
   align-items: center;
   right: 0px;
-  position: fixed;
+  position: fixed;   
   .noticeModal {
     margin-top: 20px;
     width: 450px;
