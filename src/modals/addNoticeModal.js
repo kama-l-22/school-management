@@ -8,9 +8,18 @@ export default function AddNoticeModal({
   openNotfi,
   setOpenNotifi,
   openAndCloseNotfi,
+  message,
+  setmessage,
+  type,
+  settype,
+  noticeData,
+  setnoticeData,
 }) {
+  const handlesubmit = () => {
+    console.log(type, message);
+  };
   return (
-    <div className="addnoticemodal">
+    <div className="addnoticemo">
       <div className="noticeModal">
         <div
           className="cancleButton"
@@ -25,21 +34,37 @@ export default function AddNoticeModal({
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            opnAndClose();
-            console.log(openNotfi);
-            openAndCloseNotfi();
-            console.log(openNotfi);
+            // opnAndClose();
+            // openAndCloseNotfi();
+            // handlesubmit();
+            // setnoticeData([...noticeData, { message: message, type: type }]);
           }}
         >
           <div className="form">
-            <select className="type">
+            <select
+              className="type"
+              onChange={(e) => {
+                settype(e.target.value);
+              }}
+              value={type}
+            >
               Select the Notice type
-              <option>Warning</option>
-              <option>Good</option>
-              <option>Bad Remark</option>
+              <option value={"warn"}>Warning</option>
+              <option value={"good"}>Good</option>
+              <option value={"bad"}>Bad Remark</option>
             </select>
 
-            <input type="text" className="noticeMessage" required max={50} />
+            <input
+              type="text"
+              className="noticeMessage"
+              required
+              max={50}
+              value={message}
+              onChange={(e) => {
+                setmessage(e.target.value);
+              }}
+              maxLength={100}
+            />
           </div>
           <div className="buttons">
             <button className="Add" type="submit">

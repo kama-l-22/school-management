@@ -4,7 +4,7 @@ import Student from "./student";
 import AddStudentModal from "../modals/addStudentModal";
 import { useState } from "react";
 import PostDataModal from "../modals/postDataModal";
-export default function StudentDetails() {
+export default function StudentDetails({data,setdata}) {
   const [addStdOpen, setAddStdOpen] = useState(false);
   const openAddStdClose = () => {
     setAddStdOpen(!addStdOpen);
@@ -14,7 +14,7 @@ export default function StudentDetails() {
 
   return (
     <>
-    {addStdOpen && <AddStudentModal addStdOpen={addStdOpen} openAddStdClose={openAddStdClose} setAddStdOpen={setAddStdOpen}/>} 
+    {addStdOpen && <AddStudentModal addStdOpen={addStdOpen} openAddStdClose={openAddStdClose} setAddStdOpen={setAddStdOpen} data={data} setdata={setdata}/>} 
 
     <div className="studentDetails">
       <div className="heading">Manage students attendance and activities</div>
@@ -43,18 +43,9 @@ export default function StudentDetails() {
         </div>
       </div>
       <div className="details">
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-        <Student />
-
+          {data.map((data,i)=>{return(
+            <Student data={data} key={data.rollno+i} setdata={setdata}/>
+          )})}
       </div>
     </div>
 </>
