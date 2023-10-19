@@ -11,7 +11,7 @@ export default function AddStudentModal({
   const [lname, setlname] = useState();
   const [dob, setdob] = useState();
   const [remark, setremark] = useState();
-  const rollno = data.at(-1).rollno + 1
+  const rollno = data?.at(-1).rollno + 1
   console.log(rollno);
   return (
     <div className="addstdmodal">
@@ -28,6 +28,7 @@ export default function AddStudentModal({
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            console.log('hai');
             console.log(fname,lname,dob,remark);
             setdata([...data,{rollno : rollno,fname:fname,dob:dob,remark:remark,performance :50,
               present:true}])

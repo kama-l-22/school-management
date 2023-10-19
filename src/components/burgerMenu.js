@@ -9,6 +9,7 @@ export default function BurgerMenu({
   openNotfi,
   setOpenNotifi,
   openAndCloseNotfi,
+  data,setdata
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const openAndClose = () => {
@@ -63,6 +64,8 @@ export default function BurgerMenu({
                 addStdOpen={addStdOpen}
                 openAddStdClose={openAddStdClose}
                 opnAndClose={openAndClose}
+                data={data}
+                setdata={setdata}
               />
             )}
             <div

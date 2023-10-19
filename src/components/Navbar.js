@@ -2,7 +2,7 @@ import React from 'react'
 import nklogo from '../asset/nkvlogobg.png'
 import menu from'../asset/menu.png'
 import BurgerMenu from './burgerMenu'
-export default function Navbar({userName}) {
+export default function Navbar({userName,data,setdata}) {
   return (
     <div className='navbar'>
       <div className='one'>
@@ -11,7 +11,8 @@ export default function Navbar({userName}) {
       </div>
       <div className='two'>
         <div className='username'>Welcome..! <span className='user'>{userName}</span> </div>
-        <BurgerMenu/>
+        <BurgerMenu data={data}
+          setdata={setdata}/>
       </div>
     </div>
   )

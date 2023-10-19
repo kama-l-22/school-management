@@ -1,7 +1,5 @@
 import React from "react";
-import { useState } from "react";
-export default function StudentModal({openDeatails,setopenDeatails,data}) {
-  const [width, setwidth] = useState(30);
+export default function StudentModal({openDeatails,setopenDeatails,data,setdata,fulldata}) {
   return (
     <div className="studentmodal">
       <div className="databox">
@@ -21,9 +19,7 @@ export default function StudentModal({openDeatails,setopenDeatails,data}) {
             <div className="remarks">
               <div className="top">Remarks</div>
               <ul className="list">
-                <li> Need improvement in studies</li>
-                <li>Good score</li>
-                <li>Need improvement Done!</li>
+                {data.remark.map((data,i)=>{return (<li key={data+i}>{data}</li>)})}
               </ul>
             </div>
             <div className="perfomance">
@@ -32,7 +28,15 @@ export default function StudentModal({openDeatails,setopenDeatails,data}) {
                 <button
                   className="plus"
                   onClick={() => {
-                    (width < 100) && setwidth(width + 10);
+
+                    const updateList = fulldata.map((item) => {
+                      if (item.rollno === data.rollno) {
+                        console.log(item);
+                        return { ...item, performance : (data.performance < 100) ? data.performance + 10 : data.performance};
+                      }
+                      return item;
+                    });
+                    setdata([...updateList])
                   }}
                 >
                   +
@@ -40,15 +44,23 @@ export default function StudentModal({openDeatails,setopenDeatails,data}) {
                 <button
                   className="mins"
                   onClick={() => {
-                    (width > 30) && setwidth(width - 10);
+
+                    const updateList = fulldata.map((item) => {
+                      if (item.rollno === data.rollno) {
+                        console.log(item);
+                        return { ...item, performance : (data.performance > 30) ? data.performance - 10 : data.performance};
+                      }
+                      return item;
+                    });
+                    setdata([...updateList])
                   }}
                 >
                   -
                 </button>
               </div>
               <div className="score">
-                <div className="point" style={{ width: `${width}%` }}>
-                  {width}%
+                <div className="point" style={{ width: `${data.performance}%` }}>
+                  {data.performance}%
                 </div>
               </div>
             </div>

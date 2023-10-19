@@ -331,10 +331,8 @@ body {
           .name {
             margin-left: 40px;
             cursor: pointer;
-            &:hover{
-            text-decoration: underline;
-            
-
+            &:hover {
+              text-decoration: underline;
             }
           }
         }
@@ -346,23 +344,23 @@ body {
             background-color: $colorFour;
             width: 80px;
           }
-          .work{
+          .work {
             display: flex;
             align-items: center;
-          .present {
-            color: white;
-            background: $green;
-            opacity: .6;
-            transition: all ease-out .2s;
-
+            .present {
+              color: white;
+              background: $green;
+              opacity: 0.6;
+              transition: all ease-out 0.2s;
+            }
+            .absent {
+              color: white;
+              background: $colorRed;
+              margin-left: 5px;
+              opacity: 0.5;
+              transition: all ease-in 0.2s;
+            }
           }
-          .absent {
-            color: white;
-            background: $colorRed;
-            margin-left: 5px;
-            opacity: .5;
-            transition: all ease-in .2s;
-          }}
           button {
             height: 30px;
             width: 70px;
@@ -423,6 +421,7 @@ body {
       margin: 5px;
       color: $colorOne;
       margin-right: 50px;
+      width: 40px;
     }
   }
   .noticeBoard {
@@ -548,7 +547,6 @@ body {
         &:focus {
           border: 1.5px solid $green;
         }
-       
       }
       .lastname {
         width: 50%;
@@ -566,7 +564,6 @@ body {
         &:focus {
           border: 1.5px solid $green;
         }
-      
       }
       .remarks {
         width: 90%;
@@ -584,7 +581,6 @@ body {
         &:focus {
           border: 1.5px solid $green;
         }
-       
       }
       .date {
         background: $colorTwo;
@@ -625,7 +621,7 @@ body {
     }
   }
 }
-.postdatamodal{
+.postdatamodal {
   width: 100%;
   height: 100%;
   background: #24242478;
@@ -634,10 +630,10 @@ body {
   justify-content: center;
   align-items: center;
   right: 0px;
-  position: fixed;   
+  position: fixed;
   z-index: 99;
-  .postmodal{
-    margin-top: 20px;  
+  .postmodal {
+    margin-top: 20px;
     width: 430px;
     height: 230px;
     background: $pureWhite;
@@ -653,16 +649,16 @@ body {
       margin-right: 20px;
       cursor: pointer;
     }
-    .heading{
+    .heading {
       margin-top: 5px;
       margin-left: 20px;
       font-size: 20px;
     }
-    .message{
+    .message {
       width: 300px;
       margin-left: 40px;
     }
-    .buttons{
+    .buttons {
       margin-top: 20px;
       margin-left: 30px;
       display: flex;
@@ -675,7 +671,7 @@ body {
         border-radius: 5px;
         cursor: pointer;
       }
-      .post-modal{
+      .post-modal {
         background: $green;
         color: white;
         font-size: 15px !important;
@@ -699,7 +695,7 @@ body {
   justify-content: center;
   align-items: center;
   right: 0px;
-  position: fixed;   
+  position: fixed;
   z-index: 99;
   .noticeModal {
     margin-top: 20px;
@@ -789,7 +785,7 @@ body {
     }
   }
 }
-.notfiModal{
+.notfiModal {
   width: 100%;
   height: 18%;
   top: 0px;
@@ -798,7 +794,7 @@ body {
   right: 0px;
   position: fixed;
   z-index: 99;
-  .notificaton{
+  .notificaton {
     margin-top: 20px;
     width: 350px;
     height: 80px;
@@ -816,14 +812,14 @@ body {
       margin-right: 20px;
       cursor: pointer;
     }
-    .heading{
+    .heading {
       margin-top: 10px;
       margin-left: 40px;
       font-size: 18px;
       color: $green;
       font-weight: 500;
     }
-    .message{
+    .message {
       margin-top: 10px;
       margin-left: 40px;
       font-size: 16px;
@@ -834,7 +830,7 @@ body {
     }
   }
 }
-.studentmodal{
+.studentmodal {
   width: 100%;
   height: 100%;
   background: #24242478;
@@ -844,10 +840,10 @@ body {
   align-items: center;
   z-index: 99;
   right: 0px;
-  position: fixed;  
-  
-  .databox{
-    margin-top: 20px;  
+  position: fixed;
+
+  .databox {
+    margin-top: 20px;
     width: 600px;
     height: 350px;
     background: $pureWhite;
@@ -863,7 +859,7 @@ body {
       margin-right: 20px;
       cursor: pointer;
     }
-    .heading{
+    .heading {
       margin-top: 5px;
       margin-left: 20px;
       font-size: 20px;
@@ -871,80 +867,84 @@ body {
       word-spacing: 3px;
       letter-spacing: normal !important;
     }
-    .wrap{
+    .wrap {
       display: flex;
       justify-content: space-between;
-    .det{
-      margin-left: 40px;
-      font-size: 20px;
-      width: 50%;
-      .logo{
-        background: $colorRed;
-        text-align: center;
-        font-size: 50px;
-        padding: 20px;
-        border-radius: 50%;
-        width: 100px;
-        color: $pureWhite;
-      }
-      .info{
-        margin-top: 20px;
+      .det {
+        margin-left: 40px;
         font-size: 20px;
-        .name,.fname{
-          margin-top: 5px;
+        width: 50%;
+        .logo {
+          background: $colorRed;
+          text-align: center;
+          font-size: 50px;
+          padding: 20px;
+          border-radius: 50%;
+          width: 100px;
+          color: $pureWhite;
         }
-        .dob,.rno{
-          color: $colorOne;
-          margin-top: 5px;
-        }
-      }
-    }
-    .status{
-      height: 270px;
-      margin-right: 20px;
-      width: 350px;
-      .remarks{
-        padding: 1px;
-        height: 45%;
-        background:#f0f0f0;
-        border-radius: 5px;
-        padding-bottom: 10px;
-        .top{
-          font-size: 18px;
-          color: $green;
-          margin-left: 25px;
-          margin-top: 8px;
-        }
-        .list{
-          overflow: scroll;
-          height: 80%;
-          margin-left: 25px;
-          margin-top: 8px;
-          list-style:circle;
-          li{
-            margin: 2px 0px;
-            width: 250px;
+        .info {
+          margin-top: 20px;
+          font-size: 20px;
+          .name,
+          .fname {
+            margin-top: 5px;
+          }
+          .dob,
+          .rno {
             color: $colorOne;
+            margin-top: 5px;
           }
         }
       }
-      .perfomance{
-        height: 43%;
-        padding: 1px;
-        height: 45%;
-        background:#e5e5e5;
-        border-radius: 5px;
-        padding-bottom: 10px;
-        margin-top: 15px;
-        position: relative;
-        
-          .top{
+      .status {
+        height: 270px;
+        margin-right: 20px;
+        width: 350px;
+        .remarks {
+          padding: 1px;
+          height: 45%;
+          background: #f0f0f0;
+          border-radius: 5px;
+          padding-bottom: 10px;
+          .top {
+            font-size: 18px;
+            color: $green;
+            margin-left: 25px;
+            margin-top: 8px;
+          }
+          .list {
+            overflow: scroll;
+            height: 80%;
+            margin-left: 25px;
+            margin-top: 8px;
+            list-style: circle;
+            display: flex;
+            flex-direction: column-reverse;
+            li {
+              margin: 2px 0px;
+              width: 250px;
+              color: $colorOne;
+            }
+          }
+        }
+        .perfomance {
+          height: 43%;
+          padding: 1px;
+          height: 45%;
+          background: #e5e5e5;
+          border-radius: 5px;
+          padding-bottom: 10px;
+          margin-top: 15px;
+          position: relative;
+
+          .top {
             font-size: 18px;
             color: $mid-black;
             margin-left: 25px;
             margin-top: 12px;
           }
-          .score{
+          .score {
             margin: 15px auto;
             width: 85%;
             height: 50px;
@@ -952,21 +952,21 @@ body {
             padding: 10px;
             display: flex;
             align-items: center;
-            .point{
+            .point {
               background: $colorFour;
               height: 30px;
               border-radius: 0px 10px 10px 0px;
               font-size: 15px;
               padding-left: 10px;
               padding-top: 5px;
-              transition: all .4s ease-out;
+              transition: all 0.4s ease-out;
             }
           }
-          .buttons{
+          .buttons {
             position: absolute;
             top: 12px;
             right: 20px;
-            button{
+            button {
               border: none;
               outline: none;
               font-size: 15px;
@@ -974,25 +974,20 @@ body {
               width: 22px !important;
               border-radius: 5px;
             }
-            .plus{
+            .plus {
               margin-right: 6px;
               background: $green;
             }
-            .mins{
+            .mins {
               background: $colorOne;
             }
           }
-        
+        }
       }
     }
-    
   }
 }
-
-
-
-}
-.remarkModal{
+.remarkModal {
   width: 100%;
   height: 100%;
   background: #24242478;
@@ -1001,10 +996,10 @@ body {
   justify-content: center;
   align-items: center;
   right: 0px;
-  position: fixed;   
+  position: fixed;
   z-index: 99;
-  .remark{
-    margin-top: 20px;  
+  .remark {
+    margin-top: 20px;
     width: 400px;
     height: 200px;
     background: $pureWhite;
@@ -1020,7 +1015,7 @@ body {
       margin-right: 20px;
       cursor: pointer;
     }
-    .heading{
+    .heading {
       margin-top: 0px !important;
       margin-left: 20px;
       font-size: 20px;
@@ -1028,7 +1023,7 @@ body {
     .form {
       margin-top: 0px;
       margin-left: 30px;
-      input[type='text'] {
+      input[type="text"] {
         width: 65%;
         background: #f0f0f0;
         border: none;
@@ -1038,7 +1033,8 @@ body {
         padding: 10px;
         color: #a892f9;
         height: 40px;
-      }}
+      }
+    }
     .buttons {
       margin-top: 10px;
       margin-left: 30px;
@@ -1061,11 +1057,13 @@ body {
         background: $colorFour;
         color: black;
       }
-}}}
+    }
+  }
+}
 
-// for sign-in 
+// for sign-in
 
-.sign-in{
+.sign-in {
   margin: 50px auto;
   width: 370px;
   height: 440px;
@@ -1074,14 +1072,14 @@ body {
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 15px;
-  .box{
+  .box {
     margin-top: 20px;
-    .head{
+    .head {
       text-align: center;
       color: $green;
       font-size: 20px;
     }
-    .action{
+    .action {
       margin: 15px auto;
       width: 60%;
       button {
@@ -1093,26 +1091,23 @@ body {
         border-radius: 5px;
         cursor: pointer;
         padding: 10px 20px;
-        
-        
       }
-      .si{
+      .si {
         border: 2px solid $colorOne;
         outline: none;
         margin-right: 10px;
-        transition: all ease-out .5s;
+        transition: all ease-out 0.5s;
       }
-      .sp{
+      .sp {
         border: 2px solid $colorOne;
         outline: none;
-        transition: all ease-out .5s;
-
+        transition: all ease-out 0.5s;
       }
     }
-    .form{
+    .form {
       width: 90%;
       margin: 10px auto;
-      input{
+      input {
         width: 80%;
         height: 40px;
         outline: none;
@@ -1123,13 +1118,12 @@ body {
         margin-left: 30px;
         padding-left: 20px;
         color: #a892f9;
-        &::placeholder{
+        &::placeholder {
           padding-left: 15px;
           font-size: 16px;
         }
-        
       }
-      .sendotp{
+      .sendotp {
         text-align: center;
         width: 130px;
         height: 40px;
@@ -1143,16 +1137,16 @@ body {
         font-size: 15px;
         cursor: pointer;
       }
-      .otp{
+      .otp {
         padding-left: 90px;
         letter-spacing: 5px;
         color: $mid-black !important;
-        &::placeholder{
+        &::placeholder {
           padding-left: 0px !important;
           letter-spacing: 5px;
         }
       }
-      .enter{
+      .enter {
         text-align: center;
         width: 130px;
         height: 40px;
